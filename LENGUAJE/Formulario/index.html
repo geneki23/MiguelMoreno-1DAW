@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <header>
+        <h1>Formulario Personal</h1>
+        <h3>Rellena los siguientes campos:</h3>
+    </header>
+
+    <form action="/procesar-formulario" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br><br>
+       
+        <label for="apellido">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required>  
+        <br><br>
+       
+        <label for="color fav">Color favorito:</label>
+        <input type="color" id="color" name="color" required>
+        <br><br>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+      
+        <label for="escribe algo sobre ti">Escribe algo sobre ti:</label>
+        <textarea id="escribe algo sobre ti" name="escribe algo sobre ti" rows="4" cols="50"></textarea>
+        <br><br>
+
+        <label for="provincia">Selecciona de que provincia de Andalucía eres:</label>
+        <select name="opciones">
+            <option value="">Seleccione una opción</option>
+            <option value="Sevilla">Sevilla</option>
+            <option value="Huelva">Huelva</option>
+            <option value="Córdoba">Córdoba</option>
+            <option value="Cádiz">Cádiz</option>
+            <option value="Jaén">Jaén</option>
+            <option value="Málaga">Málaga</option>
+            <option value="Granada">Granada</option>
+            <option value="Almería">Almería</option>
+          </select>
+          <br><br>
+
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telfn" name="tlfn" required>
+          <br><br>
+
+          <label for="img">Sube una imagen:</label>
+          <input type="file" id="img" accept="img/*" required>
+          <br><br>
+
+          <label for="prg">Cual es tu progreso en HTML?:</label>
+          <input type="range" id=prg min="0" max="100" placeholder="50" required>
+          <br><br>
+
+         <label for="comidas">Comidas favoritas:</label>
+         <input type="checkbox" value="pizza">
+         <label for="pizza">Pizza</label>
+         <input type="checkbox" value="ramen">
+         <label for="ramen">Ramen</label>
+         <input type="checkbox" value="hamburguesa">
+         <label for="hamburguesa">Hamburguesa</label>
+         <input type="checkbox" value="Pollo">
+         <label for="pollo">Pollo</label>
+         <label for="otra">Otra:</label>
+         <input type="text" value="">
+
+        <br><br>
+
+        <label for="hobbies">Hobbies:</label>
+         <select name="opciones">
+            <option value="">Seleccione una opción</option>
+            <option value="Videojuegos">Videojuegos</option>
+            <option value="Peliculas">Películas</option>
+            <option value="Salir">Salir con amigos</option>
+            <option value="Leer">Leer</option>
+            <option value="Musica">Música</option>
+        </select>
+        <br><br>
+         
+            
+        
+          <button type="submit">Enviar</button>
+          <button type="reset">Reset</button>
+        </form>
+        
+        
+      
+  </body>
+  </html>
+
+        
+       
+
+          
