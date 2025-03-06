@@ -1,0 +1,79 @@
+body {
+    background: linear-gradient(180deg,#83dfeb,white );
+    margin: 0;
+    padding: 20px;
+
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-align: center;
+    font-size: 45;
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+
+}
+
+.caja { 
+
+    width: 400px;
+    height: 400px;
+    line-height: 400px; 
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25;
+    border-radius: 10px;
+    margin: 3px;
+   
+    
+    
+}
+
+.caja1 {
+    background-color:  #ec2e30;
+    
+}
+
+.caja2 {
+   background-color: #52b477;
+
+}
+
+.caja3 {
+    background: linear-gradient(90deg, #ff9800, #ff5722);
+
+}
+
+
+.caja4 {
+    background: radial-gradient(circle 200px,#00157d 25%,#00e4fe);
+
+}
+
+.caja5 {
+    background: linear-gradient(90deg,#4ffeb3,#02d1fd,#000fff);
+    
+}
+
+.caja6 {
+    background: linear-gradient(120deg,#e83c92,#2991ee);
+
+}
+
+.caja7 {
+    background: radial-gradient(#fdf1d9,#f5c36a,#2fbce0 90%);
+
+}
+
+.caja8 {
+    background: radial-gradient(circle at left bottom,#f55536,#fdea3c,#309be7);
+    
+}
