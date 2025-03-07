@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   justify-content: center;
+
+}
+
+header {
+     background-color: #81b2ef;
+    padding: 20px;
+    text-align: center;
+}
+
+#mascotas {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+#quees {
+    text-align: center;
+    margin: 5% auto;
+    max-width: 30em;
+}
+
+#titulo {
+    color: #81b2ef;
+    font-size: xx-large;
+}
+
+article {
+    background-color: #eff8ff;
+    padding: 70px;
+}
+
+article h2 {
+    text-align: center;
+    margin-bottom: 80px;
+    margin-top: 10px;
+}
+
+
+article p {
+    margin: 2em;
+}
+    
+#galeria {
+    color: #81b2ef;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+#photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 660px; 
+    margin: 0 auto;
+}
+
+#photos img {
+    flex-basis: calc(33.33% - 10px); 
+    width: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+aside{
+    background-color: #f0f8ff;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+aside h2{
+    text-align: center;
+    padding: 20px;
+}
+
+aside ul{
+    padding: 0;
+    margin: 0 auto;
+    width: 80%;
+}
+
+footer{
+    background-color: #80b2ec;
+    text-align: center;
+    padding: 2em;
+    bottom: 0;
+    width: 100%;
+}
