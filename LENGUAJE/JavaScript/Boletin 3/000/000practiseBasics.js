@@ -7,7 +7,7 @@ let arrayVacio = [];
 let arrayNumeros = [10, 20, 30, 40, 50, 60];
 
 // 3. Encuentra la longitud de tu array.
-console.log("Longitud de arrayNumeros:", arrayNumeros.length); // Salida: 6
+console.log("Longitud de arrayNumeros:", arrayNumeros.length); 
 
 // 4. Obtén el primer elemento, el elemento del medio y el último elemento de un array.
 let primerElemento = arrayNumeros[0];

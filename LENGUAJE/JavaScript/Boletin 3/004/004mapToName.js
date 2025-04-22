@@ -1,5 +1,3 @@
-"use strict"
-
 "use strict";
 
 let acdc = { name: "ACDC", age: 25 };

@@ -11,11 +11,11 @@ code.add("JavaScript"); // Duplicado, no se añadira
 code.add("C++");
 
 // Mostrar el contenido inicial del Set
-console.log("Contenido inicial del Set:", code); // No incluira duplicados
+console.log("Contenido inicial del Set:", code); 
 
 // Comprobar si existen los elementos "Java" y "Ruby"
-console.log("¿El Set contiene 'Java'?", code.has("Java")); // true
-console.log("¿El Set contiene 'Ruby'?", code.has("Ruby")); // false
+console.log("¿El Set contiene 'Java'?", code.has("Java")); 
+console.log("¿El Set contiene 'Ruby'?", code.has("Ruby")); 
 
 // Eliminar el elemento "C++"
 code.delete("C++");
