@@ -1,0 +1,27 @@
+:root {
+    --bg-6: #ffc1cb;
+    --bg-7: #dda1dd;
+    --bg-8: #800080;
+    --bg-9: #6495ec;
+    --bg-10: #00ced1;
+}
+
+.bg-6 {
+    background-color: var(--bg-6);
+}
+
+.bg-7 {
+    background-color: var(--bg-7);
+}
+
+.bg-8 {
+    background-color: var(--bg-8);
+}
+
+.bg-9 {
+    background-color: var(--bg-9);
+}
+
+.bg-10 {
+    background-color: var(--bg-10);
+}

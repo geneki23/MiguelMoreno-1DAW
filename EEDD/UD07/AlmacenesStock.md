@@ -80,4 +80,114 @@ La **Plataforma Web de Gestión Integral de Almacenes y Stock** es una aplicaci�
 
 ---
 
+## Introducción
+
+La **Plataforma Web de Gestión Integral de Almacenes y Stock** es una aplicación modular y escalable diseñada para empresas de distribución y fabricación. Permite:
+
+* Planificar y supervisar flujos de entrada y salida de mercancías.
+* Controlar niveles de stock en tiempo real con históricos de movimientos.
+* Optimizar la ubicación interna de productos (pasillos, estantes, zonas de picking).
+* Generar alertas automáticas ante umbrales críticos y caducidades.
+* Facilitar la preparación de pedidos y su expedición, con integración de transportistas.
+* Ofrecer dashboards y reportes dinámicos para la toma de decisiones operativas y estratégicas.
+
+---
+
+## 5. Diagrama de Casos de Uso
+
+```mermaid
+graph TD
+  U[Operario de Inventario]
+  G[Gestor de Almacén]
+  A[Administrador de Plataforma]
+  L[Analista de Logística]
+
+  C1[Dar de alta producto]
+  C2[Configurar ubicaciones internas]
+  C3[Realizar recuento de stock]
+  C4[Generar orden de picking]
+  C5[Enviar alertas y notificaciones]
+  C6[Visualizar dashboards KPI]
+
+  U --> C1
+  U --> C3
+  G --> C2
+  G --> C4
+  A --> C1
+  A --> C2
+  A --> C5
+  L --> C6
+
+```
+
+---
+
+## 6. Matriz de Trazabilidad
+
+| **Req. ID** | **Descripción Req.**                          | **Objetivo(s)** | **Caso de Uso** | **Caso de Prueba**           |
+| ----------- | --------------------------------------------- | --------------- | --------------- | ---------------------------- |
+| RF-01       | Alta de producto                              | OBJ-01          | CU-01           | TP-01: Crear producto        |
+| RF-03       | Registro de recepciones y traslados           | OBJ-01, OBJ-02  | CU-03           | TP-03: Recuento de stock     |
+| RF-05       | Órdenes de salida y picking                   | OBJ-02          | CU-04           | TP-04: Generar picking       |
+| RF-09       | Alertas y notificaciones                      | OBJ-03          | CU-05           | TP-05: Envío de alertas      |
+| RF-10       | Dashboards de rotación y tasa de cumplimiento | OBJ-04          | CU-06           | TP-06: Visualizar dashboards |
+
+---
+
+## 7. Diagrama de Secuencia: Generar Orden de Picking
+
+```mermaid
+sequenceDiagram
+  actor Gestor as "Gestor de Almacén"
+  participant UI
+  participant API
+  participant System
+  Gestor->>UI: Solicita generación de picking
+  UI->>API: POST /picking {pedidoID}
+  API->>System: calcularRutaOptima(pedidoID)
+  System-->>API: listaRuta y items
+  API-->>UI: 200 OK + listaPicking
+  UI-->>Gestor: Mostrar lista de picking optimizada
+```
+
+---
+
+## 8. Diagrama de Estado: Ciclo de Vida de un Pedido
+
+```mermaid
+stateDiagram-v2
+  [*] --> Creado
+  Creado --> EnPicking    : generarPicking()
+  EnPicking --> Enviado   : confirmarExpedicion()
+  Enviado --> Entregado  : confirmarEntrega()
+  Entregado --> [*]
+
+  EnPicking --> EnPicking : ajustarRuta() / replanificar()
+```
+
+---
+
+## 9. Diagrama de Actividad: Recepción de Mercancías
+
+```mermaid
+flowchart TD
+  Inicio((●))
+  Recibir([Registrar recepción])
+  Escanear([Escanear códigos de barras/RFID])
+  Validar([Validar datos y cantidades])
+  Decidir{¿Coincide con pedido?}
+  Ajustar([Registrar mermas o discrepancias])
+  Actualizar([Actualizar inventario])
+  Notificar([Enviar notificación de recepción])
+  Fin((◉))
+
+  Inicio --> Recibir
+  Recibir --> Escanear
+  Escanear --> Validar
+  Validar --> Decidir
+  Decidir -- No --> Ajustar --> Actualizar
+  Decidir -- Sí --> Actualizar
+  Actualizar --> Notificar --> Fin
+```
+
 
